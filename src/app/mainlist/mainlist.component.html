@@ -1,0 +1,88 @@
+<bs-navbar (enterEvent2)="wEnterEvent2($event)"></bs-navbar>
+
+<article class="for_img1">
+    <section [ngSwitch]="current1" class="main1">
+        <h1 @slide><span *ngSwitchCase="'en'">Learn foreign languages online!</span>
+            <span *ngSwitchCase="'ru'">Изучайте иностранные языки онлайн!</span>
+            <span *ngSwitchCase="'ua'">Вивчайте іноземні мови онлайн!</span></h1>
+        <h2 @fade>
+            <span *ngSwitchCase="'en'">This will open your way to new acquaintances, better work, exciting trips to exotic corners of the world and much more ..</span>
+            <span *ngSwitchCase="'ru'">Это откроет Вам дорогу к новым знакомствам, лучшей работы, увлекательных путешествий в экзотические уголки мира и многое другое ..</span>
+            <span *ngSwitchCase="'ua'"> Це відкриє Вам дорогу до нових знайомств, кращої роботи, захопливих подорожей у екзотичні куточки світу і багато іншого ..</span>
+        </h2>
+        <h3 @slideRight>
+            <span *ngSwitchCase="'en'">A capable personal teacher will be your best help in learning English, Russian and Ukrainian</span>
+            <span *ngSwitchCase="'ru'">Умелый личный учитель - будет Вам лучшей помощью в изучении английского, русского и украинского языков</span>
+            <span *ngSwitchCase="'ua'">Вмілий особистий учитель - буде Вам найкращою допомогою у вивченні англійської, російської і української мов</span>
+        </h3>
+        <h3 @slideBottom class="h3_3">
+            <span *ngSwitchCase="'en'">And in the School you can learn Spanish, French and Polish</span>
+            <span *ngSwitchCase="'ru'">А ещё в Школе Вы можете изучать испанский, французский и польский языки</span>
+            <span *ngSwitchCase="'ua'">А ще в Школі Ви можете вивчати іспанську, французьку і польську мови</span>
+        </h3>
+        <div class="btn1">
+            <a *ngSwitchCase="'en'" routerLink="/start-learn" class="btn btn-success">Start learning</a>
+            <a *ngSwitchCase="'en'" routerLink="/how-it-works" class="btn btn-outline-warning">How it works</a>
+
+            <a *ngSwitchCase="'ru'" routerLink="/start-learn" class="btn btn-success">начать обучение</a>
+            <a *ngSwitchCase="'ru'" routerLink="/how-it-works" class="btn btn-outline-warning">Как это работает</a>
+
+            <a *ngSwitchCase="'ua'" routerLink="/start-learn" class="btn btn-success">Почати навчання</a>
+            <a *ngSwitchCase="'ua'" routerLink="/how-it-works" class="btn btn-outline-warning">Як це працює</a>
+            <section class="price">
+                <p>
+                    <button type="button" class="btn btn-success" (click)="isCollapsed2 = !isCollapsed2"
+                            [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseExample">
+                        prices
+                    </button>
+                </p>
+                <div id="collapseExample" [ngbCollapse]="isCollapsed2">
+                    <div class="card">
+                        <div class="card-body">
+                           <p>spoken English is $ 4 / hour</p>
+                            <p>Business English is $ 5 / hour</p>
+                            <p>Preparation for the exam - $ 6 / hour</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!--<section class="accordion1">-->
+        <!--<ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">-->
+            <!--<ngb-panel title="Simple">-->
+                <!--<ng-template ngbPanelContent>-->
+                    <!--Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia-->
+                    <!--aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,-->
+                    <!--sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,-->
+                    <!--craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings-->
+                    <!--occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus-->
+                    <!--labore sustainable VHS.-->
+                <!--</ng-template>-->
+            <!--</ngb-panel>-->
+            <!--<ngb-panel>-->
+                <!--<ng-template ngbPanelTitle>-->
+                    <!--<span>&#9733; <b>Fancy</b> title &#9733;</span>-->
+                <!--</ng-template>-->
+                <!--<ng-template ngbPanelContent>-->
+                    <!--Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia-->
+                    <!--aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,-->
+                    <!--sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,-->
+                    <!--craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings-->
+                    <!--occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus-->
+                    <!--labore sustainable VHS.-->
+                <!--</ng-template>-->
+            <!--</ngb-panel>-->
+            <!--<ngb-panel title="Disabled" [disabled]="true">-->
+                <!--<ng-template ngbPanelContent>-->
+                    <!--Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia-->
+                    <!--aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,-->
+                    <!--sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,-->
+                    <!--craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings-->
+                    <!--occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus-->
+                    <!--labore sustainable VHS.-->
+                <!--</ng-template>-->
+            <!--</ngb-panel>-->
+        <!--</ngb-accordion>-->
+    <!--</section>-->
+</article>

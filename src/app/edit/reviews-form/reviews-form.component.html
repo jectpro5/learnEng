@@ -1,0 +1,67 @@
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+  <div class="form-group">
+    <label for="task">Дата</label>
+    <textarea rows="2" cols="45" #task="ngModel" [(ngModel)]="tasks.task" name="task" id="task" type="text" class="form-control"></textarea>
+    <div class="alert alert-danger" *ngIf="task.touched && task.invalid">Task is required</div>
+  </div>
+  <!--<div class="form-group">-->
+    <!--<label for="priority">Date, time</label>-->
+    <!--<input #priority="ngModel" [(ngModel)]="tasks.priority" name="priority" type="text" class="form-control">-->
+  <!--</div>-->
+  <div class="form-group">
+    <label for="priority">D2</label>
+    <textarea rows="2" cols="45" [(ngModel)]="tasks.priority" name="priority" id="priority" type="text" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="comment">D3</label>
+    <textarea rows="2" cols="45" [(ngModel)]="tasks.comment" name="comment" id="comment" type="text" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="details">D4</label>
+    <textarea rows="2" cols="45" [(ngModel)]="tasks.details" name="details" id="details" type="text" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="d4">D5</label>
+    <textarea rows="2" cols="45" [(ngModel)]="tasks.d4" name="d4" id="d4" type="text" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="d5">D6</label>
+    <textarea rows="2" cols="45" [(ngModel)]="tasks.d5" name="d5" id="d5" type="text" class="form-control"></textarea>
+  </div>
+  <div class="form-group">
+    <label for="d6">D7</label>
+    <textarea rows="2" cols="45" [(ngModel)]="tasks.d6" name="d6" id="d6" type="text" class="form-control"></textarea>
+  </div>
+
+  <!--<h2>Русский блок</h2>-->
+  <!--<div class="form-group">-->
+    <!--<label for="task">Task</label>-->
+    <!--<textarea rows="2" cols="45" #task="ngModel" [(ngModel)]="tasks.taskru" name="taskru" id="taskru" type="text" class="form-control" required></textarea>-->
+    <!--<div class="alert alert-danger" *ngIf="task.touched && task.invalid">Task is required</div>-->
+  <!--</div>-->
+  <!--<div class="form-group">-->
+    <!--<label for="priority">Priority</label>-->
+    <!--<input #priority="ngModel" [(ngModel)]="tasks.priorityru" name="priorityru" id="priorityru" type="text" class="form-control">-->
+  <!--</div>-->
+  <!--<div class="form-group">-->
+    <!--<label for="comment">Comment</label>-->
+    <!--<textarea rows="10" cols="45" [(ngModel)]="tasks.commentru" name="commentru" id="commentru" type="text" class="form-control"></textarea>-->
+  <!--</div>-->
+
+  <!--<h2>Український блок</h2>-->
+  <!--<div class="form-group">-->
+    <!--<label for="task">Task</label>-->
+    <!--<textarea rows="2" cols="45" #task="ngModel" [(ngModel)]="tasks.taskua" name="taskua" id="taskua" type="text" class="form-control" required></textarea>-->
+    <!--<div class="alert alert-danger" *ngIf="task.touched && task.invalid">Task is required</div>-->
+  <!--</div>-->
+  <!--<div class="form-group">-->
+    <!--<label for="priority">Priority</label>-->
+    <!--<input #priority="ngModel" [(ngModel)]="tasks.priorityua" name="priorityua" id="priorityua" type="text" class="form-control">-->
+  <!--</div>-->
+  <!--<div class="form-group">-->
+    <!--<label for="comment">Comment</label>-->
+    <!--<textarea rows="10" cols="45" [(ngModel)]="tasks.commentua" name="commentua" id="commentua" type="text" class="form-control"></textarea>-->
+  <!--</div>-->
+  <button class="btn btn-primary">Save</button>
+  <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
+</form>

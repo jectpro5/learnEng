@@ -1,0 +1,59 @@
+<bs-navbar (enterEvent2)="wEnterEvent2($event)"></bs-navbar>
+
+<!--<app-scheduler></app-scheduler>-->
+<article class="bg1">
+    <div class="my_container_content_2">
+        <h1>Schedule</h1>
+
+        <div class="row for_mrg_lft">
+            <ul *ngFor="let t of filteredTasks" class="list-group for_ul col-6 col-sm-4 col-md-3 col-xl-2">
+                <li class="list-group-item text-center bg-success">{{ t.task }}</li>
+                <!--<li *ngIf="t.priority?.length > 0" class="list-group-item separate_paragrafs"><span>9:00</span>  {{ t.priority }}</li>-->
+                <li [className]="t.priority?.length > 5 ? 'bg_full list-group-item separate_paragrafs' : 'bg-warning list-group-item separate_paragrafs'"><span class="time">9:00</span>  {{ t.priority }}</li>
+                <li [className]="t.comment?.length > 5 ? 'bg_full list-group-item separate_paragrafs' : 'bg-warning list-group-item separate_paragrafs'"><span class="time">9:45</span> {{ t.comment }}</li>
+                <li [className]="t.details?.length > 5 ? 'bg_full list-group-item separate_paragrafs' : 'bg-warning list-group-item separate_paragrafs'"><span class="time">10:30</span> {{ t.details }}</li>
+                <li [className]="t.d4?.length > 5 ? 'bg_full list-group-item separate_paragrafs' : 'bg-warning list-group-item separate_paragrafs'"><span class="time">11:15</span> {{ t.d4 }}</li>
+                <li [className]="t.d5?.length > 5 ? 'bg_full list-group-item separate_paragrafs' : 'bg-warning list-group-item separate_paragrafs'"><span class="time">12:00</span> {{ t.d5 }}</li>
+                <li [className]="t.d6?.length > 5 ? 'bg_full list-group-item separate_paragrafs' : 'bg-warning list-group-item separate_paragrafs'"><span class="time">13:45</span> {{ t.d6 }}</li>
+                <li class="list-group-item"><a [routerLink]="['/edit/', t.$key]">Edit</a></li>
+                <!--<li *ngIf="t.task?.length > 0" class-->
+            </ul>
+        </div>
+
+
+        <!--<table @fade class="table for_table">-->
+            <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>People</th>-->
+                <!--<th>Date, time</th>-->
+                <!--<th>Task</th>-->
+                <!--<th>Details</th>-->
+                <!--<th>Edit</th>-->
+            <!--</tr>-->
+            <!--</thead>-->
+            <!--<tbody>-->
+            <!--<tr *ngFor="let t of filteredTasks" class="color2">-->
+                <!--<td>{{ t.task }}</td>-->
+                <!--<td>{{ t.priority }}</td>-->
+                <!--<td>{{ t.comment }}</td>-->
+                <!--<td>{{ t.details }}</td>-->
+                <!--<td>-->
+                    <!--<a [routerLink]="['/edit/', t.$key]">Edit</a>-->
+                <!--</td>-->
+            <!--</tr>-->
+            <!--</tbody>-->
+        <!--</table>-->
+        <div @fade2 class="add_new">
+            <p>
+                <a routerLink="/reviews-form" class="btn btn-primary btn-sm">New Task</a>
+            </p>
+
+            <!--<p>-->
+                <!--<input-->
+                        <!--#query-->
+                        <!--(keyup)="filter(query.value)"-->
+                        <!--type="text" class="form-control" placeholder="Search the task ...">-->
+            <!--</p>-->
+        </div>
+    </div>
+</article>

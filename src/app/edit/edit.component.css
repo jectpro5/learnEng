@@ -1,0 +1,56 @@
+
+.list-group {
+    margin: 20px 0;
+}
+h1 {
+    font-size: 25px;
+    font-style: italic;
+    color: red;
+    padding-top: 20px;
+}
+.bg1 {
+    padding: 30px;
+    height:100%;
+    background: url(../img_main/fresh_snow.png) 100% 100% no-repeat;
+    background-size: cover;
+    min-height: 700px;
+}
+.for_mrg_lft {
+   margin-left: 0;
+}
+.for_ul {
+    padding-right: 0;
+}
+.for_ul li.text-center {
+    padding: 0.75rem 0.3rem;
+}
+.bg_full {
+    background-color: wheat;
+}
+/*table {*/
+    /*border: 1px solid #D4D4D4;*/
+/*}*/
+/*thead {*/
+    /*background-color: #D4D4D4;*/
+/*}*/
+@media (max-width: 850px) {
+    li.list-group-item {
+        padding: 0.75rem 0.5rem
+    }
+}
+@media (max-width: 625px) {
+    .bg1 {
+        padding: 20px 0 0;
+    }
+    .for_mrg_lft {
+        margin: 10px 0;
+    }
+}
+@media (max-width: 390px) {
+    .for_ul {
+        max-width: 100% !important;
+        flex: 0 0 95%;
+        margin: auto;
+        padding-bottom: 15px;
+    }
+}

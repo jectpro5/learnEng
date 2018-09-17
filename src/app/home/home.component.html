@@ -1,0 +1,101 @@
+<!--<img [src]="LOGO" alt="img1">-->
+<bs-navbar (enterEvent2)="wEnterEvent2($event)"></bs-navbar>
+
+<article [ngSwitch]="current1" class="bg1">
+    <h1 *ngSwitchCase="'en'">On this page, you can add, edit or delete paragraphs or images dynamically</h1>
+    <h1 *ngSwitchCase="'ru'">На этой странице вы можете добавлять, редактировать или удалять абзацы или изображения динамически</h1>
+    <h1 *ngSwitchCase="'ua'">На цій сторінці ви можете додавати, редагувати або видаляти абзаци або зображення динамічно</h1>
+
+    <div *ngSwitchCase="'en'">
+        <ul *ngFor="let t of filteredTasks" class="list-group for_li">
+            <li *ngIf="t.task?.length > 0" class="list-group-item separate_paragrafs">{{ t.task }}</li>
+            <!--<li *ngIf="t.priority?.length > 0" class="list-group-item separate_paragrafs">{{ t.priority }}</li>-->
+            <li *ngIf="t.comment?.length > 0"  class="list-group-item separate_paragrafs">
+                <div class="row">
+                <div class="col">{{ t.comment }}</div>
+                    <div class="col-5 align-self-center img2">
+                        <h3 *ngIf="t.priority?.length > 0">{{ t.priority }}</h3>
+                        <img *ngIf="t.imageUrl" [src]="t.imageUrl" alt="{{ t.title }}">
+                        <p></p>
+                    </div>
+                </div>
+            </li>
+            <li *ngIf="t.task?.length > 0 || t.comment?.length > 0" class="list-group-item"><a [routerLink]="['/home/', t.$key]">Edit</a></li>
+        </ul>
+
+        <div @fade2 class="add_new">
+            <p>
+                <a routerLink="/plan-form" class="btn btn-primary btn-sm">New Task</a>
+            </p>
+
+            <p>
+                <input
+                        #query
+                        (keyup)="filter(query.value)"
+                        type="text" class="form-control" placeholder="Search the task ...">
+            </p>
+        </div>
+    </div>
+
+    <div *ngSwitchCase="'ru'">
+        <ul *ngFor="let t of filteredTasks" class="list-group for_li">
+            <li *ngIf="t.taskru?.length > 0" class="list-group-item">{{ t.taskru }}</li>
+            <!--<li *ngIf="t.priorityru?.length > 0" class="list-group-item">{{ t.priorityru }}</li>-->
+            <li *ngIf="t.comment?.length > 0"  class="list-group-item separate_paragrafs">
+                <div class="row">
+                    <div class="col">{{ t.commentru }}</div>
+                    <div class="col-5 align-self-center img2">
+                        <h3 *ngIf="t.priorityru?.length > 0">{{ t.priorityru }}</h3>
+                        <img *ngIf="t.imageUrl" [src]="t.imageUrl" alt="{{ t.title }}">
+                        <p></p>
+                    </div>
+                </div>
+            </li>
+            <li *ngIf="t.taskru?.length > 0 || t.comment?.length > 0" class="list-group-item"><a [routerLink]="['/home/', t.$key]">Edit</a></li>
+        </ul>
+
+        <div class="add_new">
+            <p>
+                <a routerLink="/plan-form" class="btn btn-primary btn-sm">New Task</a>
+            </p>
+
+            <p>
+                <input
+                        #query
+                        (keyup)="filter(query.value)"
+                        type="text" class="form-control" placeholder="Search the task ...">
+            </p>
+        </div>
+    </div>
+
+    <div *ngSwitchCase="'ua'">
+        <ul *ngFor="let t of filteredTasks" class="list-group for_li">
+            <li *ngIf="t.taskua?.length > 0" class="list-group-item">{{ t.taskua }}</li>
+            <!--<li *ngIf="t.priorityua?.length > 0" class="list-group-item">{{ t.priorityua }}</li>-->
+            <li *ngIf="t.comment?.length > 0"  class="list-group-item separate_paragrafs">
+                <div class="row">
+                    <div class="col">{{ t.commentua }}</div>
+                    <div class="col-5 align-self-center img2">
+                        <h3 *ngIf="t.priorityua?.length > 0" >{{ t.priorityua }}</h3>
+                        <img *ngIf="t.imageUrl" [src]="t.imageUrl" alt="{{ t.title }}">
+                        <p></p>
+                    </div>
+                </div>
+            </li>
+            <li *ngIf="t.taskua?.length > 0 || t.comment?.length > 0" class="list-group-item"><a [routerLink]="['/home/', t.$key]">Edit</a></li>
+        </ul>
+
+        <div class="add_new">
+            <p>
+                <a routerLink="/plan-form" class="btn btn-primary btn-sm">New Task</a>
+            </p>
+
+            <p>
+                <input
+                        #query
+                        (keyup)="filter(query.value)"
+                        type="text" class="form-control" placeholder="Search the task ...">
+            </p>
+        </div>
+    </div>
+</article>

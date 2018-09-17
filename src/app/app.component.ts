@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  // items1 = ['en', 'ru', 'ua'];
+  // current1 = 'en';
+  //
+  // onClick(number: string) {
+  //   this.current1 = number;
+  // }
 }

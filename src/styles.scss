@@ -1,0 +1,104 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+$col1: #F2F2F2;
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .3s ease-out;
+}
+
+body {
+    padding-top: 50px;
+    font: 16px 'Tahoma', sans-serif;
+}
+/*===============nav=============*/
+.my_container {
+    width: 100%;
+    position: relative;
+}
+.my_container_content {
+    margin: 0 15px;
+}
+.my_container_content_1 {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.my_container_content_2 {
+    width: 99%;
+    margin: 0 auto;
+}
+.thumbnail_1 {
+    display: block;
+    padding: 20px;
+    margin: 30px 0;
+    line-height: 1.42857143;
+    background-color: #F3F3F3;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: border .2s ease-in-out;
+}
+.sw_lng {
+    position: absolute;
+    right: 0;
+    top: -2px;
+}
+.sw_lng a {
+    color: #FCFCFC !important;
+    margin-left: 2px;
+}
+
+/*==============end nav=============*/
+
+form {
+    margin: 20px auto;
+    width: 70%;
+    min-height: 400px;
+    border: 3px solid rgba(200, 70, 100, 0.5);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 3px 3px 25px rgba(200, 70, 100, 0.4);
+}
+
+h1 {
+    text-align: center;
+}
+.color2 {
+   background-color: $col1;
+}
+
+.separate_paragrafs {
+    white-space: pre-line;
+    //text-indent: 20px;
+    position: relative;
+    min-height: 45px;
+    .time {
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        padding: 2px 4px;
+        border: 1px solid #ccc;
+    }
+}
+.dhx_cal_container{
+    margin-top: 30px !important;
+    overflow: visible !important;
+}
+.dhx_cal_navline{
+    top: -30px !important;
+}
+@media (max-width: 1000px) {
+    form {
+        width: 90%;
+    }
+}
+@media (max-width: 800px) {
+    form {
+        width: 100%;
+    }
+}
+/*@media (max-width: 575px) {*/
+   /*body {*/
+      /*padding-top: 145px;*/
+   /*}*/
+/*}*/
