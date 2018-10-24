@@ -31,19 +31,6 @@ export class EditComponent implements OnInit, OnDestroy {
                 this.filteredTasks = this.tasks = tasks;
                 this.showSpinner = false;
             });
-
-        // this.items1 = langgServise.getItems1();
-        // this.current1 = this.langgServise.getCurrent();
-    }
-
-    onClick(number: string) {
-        this.current1 = number;
-    }
-
-    filter(query: string) {
-        this.filteredTasks = (query) ?
-            this.tasks.filter(t => t.task.toLowerCase().includes(query.toLowerCase())) :
-            this.tasks;
     }
 
     ngOnDestroy() {

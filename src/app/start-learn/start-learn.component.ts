@@ -11,20 +11,11 @@ export class StartLearnComponent implements OnInit {
     items1;
     current1;
     public isCollapsed = true;
-    public LOGO = require('../img_main/school-1.jpg');
-    public sl_img2 = require('../img_main/women.jpg');
+    LOGO = require('../../assets/images/img_main/school-1.jpg');
+    sl_img2 = require('../../assets/images/img_main/women.jpg');
 
   constructor(private langgServise: LanguageService) {
-      // this.items1 = langgServise.getItems1();
-      // this.current1 = this.langgServise.getCurrent();
   }
-
-    onClick(number: string) {
-        this.current1 = number;
-    }
-    wEnterEvent2(number: string) {
-        this.current1 = number;
-    }
   ngOnInit() {
   }
 

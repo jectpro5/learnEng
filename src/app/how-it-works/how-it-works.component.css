@@ -6,7 +6,7 @@ h1 {
     padding-top: 10%;
     padding-bottom: 55%;
     height: auto;
-    background: url(../img_main/blackboard-school.jpg) 100% 100% no-repeat;
+    background: url(../../assets/images/img_main/blackboard-school.jpg) 100% 100% no-repeat;
     background-size: cover;
     position: relative;
 }

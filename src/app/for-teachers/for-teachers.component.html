@@ -1,15 +1,4 @@
-<bs-navbar (enterEvent2)="wEnterEvent2($event)"></bs-navbar>
-
-<article [ngSwitch]="current1" class="bg1">
-<h1 *ngSwitchCase="'en'" class="video_0">
-  These videos open through a link to YouTube
-</h1>
-  <h1 *ngSwitchCase="'ru'" class="video_0">
-    Эти видеоролики открываются по ссылке на YouTube
-  </h1>
-  <h1 *ngSwitchCase="'ua'" class="video_0">
-    Ці відео відкриваються через посилання на YouTube
-  </h1>
+<article class="bg1">
 <div *ngFor="let item of videoList" class="video_0">
   <!--<a href="videos/{{ item.slug }}">{{ item.name }}</a>-->
   <h3 *ngIf="item.embed">{{ item.name }}</h3>

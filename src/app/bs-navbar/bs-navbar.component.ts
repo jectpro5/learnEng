@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import {LanguageService} from '../language.service';
 import {Observable} from 'rxjs/Observable';
 import {map, switchMap} from 'rxjs/operators';
@@ -8,8 +8,7 @@ import {map, switchMap} from 'rxjs/operators';
     templateUrl: './bs-navbar.component.html',
     styleUrls: ['./bs-navbar.component.css']
 })
-export class BsNavbarComponent implements OnInit, OnDestroy {
-    @Output() enterEvent2 = new EventEmitter();
+export class BsNavbarComponent {
 
     list = {
         'en': 'En',
@@ -26,18 +25,7 @@ export class BsNavbarComponent implements OnInit, OnDestroy {
         );
     }
 
-    ngOnInit() {
-        // setTimeout(() => {
-        //     this.langgServise.setLanguage('uk');
-        // }, 2000);
-    }
-
-    ngOnDestroy() {
-    }
-
     onClick(lang: string) {
-        // this.current1 = number;
-        // this.enterEvent2.emit(this.current1);
         this.langgServise.setLanguage(lang);
     }
 

@@ -1,5 +1,3 @@
-<bs-navbar (enterEvent2)="wEnterEvent2($event)"></bs-navbar>
-
 <!--<app-scheduler></app-scheduler>-->
 <app-loader *ngIf="showSpinner"></app-loader>
 <article class="bg1">
@@ -21,40 +19,10 @@
             </ul>
         </div>
 
-
-        <!--<table @fade class="table for_table">-->
-            <!--<thead>-->
-            <!--<tr>-->
-                <!--<th>People</th>-->
-                <!--<th>Date, time</th>-->
-                <!--<th>Task</th>-->
-                <!--<th>Details</th>-->
-                <!--<th>Edit</th>-->
-            <!--</tr>-->
-            <!--</thead>-->
-            <!--<tbody>-->
-            <!--<tr *ngFor="let t of filteredTasks" class="color2">-->
-                <!--<td>{{ t.task }}</td>-->
-                <!--<td>{{ t.priority }}</td>-->
-                <!--<td>{{ t.comment }}</td>-->
-                <!--<td>{{ t.details }}</td>-->
-                <!--<td>-->
-                    <!--<a [routerLink]="['/edit/', t.$key]">Edit</a>-->
-                <!--</td>-->
-            <!--</tr>-->
-            <!--</tbody>-->
-        <!--</table>-->
         <div @fade2 class="add_new">
             <p>
                 <a routerLink="/reviews-form" class="btn btn-primary btn-sm">New Task</a>
             </p>
-
-            <!--<p>-->
-                <!--<input-->
-                        <!--#query-->
-                        <!--(keyup)="filter(query.value)"-->
-                        <!--type="text" class="form-control" placeholder="Search the task ...">-->
-            <!--</p>-->
         </div>
     </div>
 </article>

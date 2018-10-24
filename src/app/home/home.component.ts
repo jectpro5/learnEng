@@ -22,7 +22,7 @@ declare let require: any;
 })
 export class HomeComponent implements OnInit, OnDestroy {
     showSpinner = true;
-    public LOGO = require('./img/polynesia.jpg');
+    // public LOGO = require('./img/polynesia.jpg');
     title = 'learn english';
     tasks: Task[];
     filteredTasks: any[];
@@ -81,10 +81,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     ngOnDestroy() {
         this.subscription_en.unsubscribe();
     }
-
-    // wEnterEvent2(number: string) {
-    //     this.current1 = number;
-    // }
 
     ngOnInit() {
         // console.log(this.form.controls);
