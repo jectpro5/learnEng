@@ -32,8 +32,8 @@ export class ForTeachersComponent implements OnInit {
     ];
 
   constructor(private sanitizer: DomSanitizer, private langgServise: LanguageService) {
-      this.items1 = langgServise.getItems1();
-      this.current1 = this.langgServise.getCurrent();
+      // this.items1 = langgServise.getItems1();
+      // this.current1 = this.langgServise.getCurrent();
   }
 
     wEnterEvent2(number: string) {

@@ -1,120 +1,32 @@
-<bs-navbar (enterEvent2)="wEnterEvent2($event)"></bs-navbar>
-
-<div [ngSwitch]="current1" class="bg1">
-  <h1 *ngSwitchCase="'en'">
-    There is a mp4 player installed here. As a result, you can watch a video posted in one of the project folders.
-  </h1>
-  <h1 *ngSwitchCase="'ru'">
-    Здесь установлен проигрыватель MP4. Через него вы можете посмотреть видео, размещенное в одной из папок проекта.
-  </h1>
-  <h1 *ngSwitchCase="'ua'">
-    Тут встановлений програвач MP4. Через нього ви можете переглянути відео, розміщене в одній з папок проекту.
-  </h1>
-  <!------------------------------------------------------------------------------------------------->
-  <h2 *ngSwitchCase="'en'">
-    Video 1
-  </h2>
-  <h2 *ngSwitchCase="'ru'">
-   Видео 1
-  </h2>
-  <h2 *ngSwitchCase="'ua'">
-    Вiдео 1
-  </h2>
-  <vg-player>
-  <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls>
-  <source src="../../assets/video/video1.mp4" type="video/mp4">
-  </video>
-  </vg-player>
-<!------------------------------------------------------------------------------>
-  <h2 *ngSwitchCase="'en'">
-    Video 2
-  </h2>
-  <h2 *ngSwitchCase="'ru'">
-    Видео 2
-  </h2>
-  <h2 *ngSwitchCase="'ua'">
-    Вiдео 2
-  </h2>
-  <vg-player>
-    <video [vgMedia]="media" #media id="singleVideo2" preload="auto" controls>
-      <source src="../../assets/video/video2.mp4" type="video/mp4">
-    </video>
-  </vg-player>
-<!----------------------------------------------------------------------->
-  <h2 *ngSwitchCase="'en'">
-    Video 3
-  </h2>
-  <h2 *ngSwitchCase="'ru'">
-    Видео 3
-  </h2>
-  <h2 *ngSwitchCase="'ua'">
-    Вiдео 3
-  </h2>
-  <vg-player>
-    <video [vgMedia]="media" #media id="singleVideo3" preload="auto" controls>
-      <source src="../../assets/video/video3.mp4" type="video/mp4">
-    </video>
-  </vg-player>
-<!---------------------------------------------------------------------->
-  <h2 *ngSwitchCase="'en'">
-    Video 4
-  </h2>
-  <h2 *ngSwitchCase="'ru'">
-    Видео 4
-  </h2>
-  <h2 *ngSwitchCase="'ua'">
-    Вiдео 4
-  </h2>
-  <vg-player>
-    <video [vgMedia]="media" #media id="singleVideo4" preload="auto" controls>
-      <source src="../../assets/video/video4.mp4" type="video/mp4">
-    </video>
-  </vg-player>
-
-<!--======================================================================-->
-    <h2 *ngSwitchCase="'en'">
-        Video 5
-    </h2>
-    <h2 *ngSwitchCase="'ru'">
-        Видео 5
-    </h2>
-    <h2 *ngSwitchCase="'ua'">
-        Вiдео 5
-    </h2>
-  <vg-player>
-  <vg-overlay-play></vg-overlay-play>
-  <vg-buffering></vg-buffering>
-
-  <vg-scrub-bar>
-  <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-  <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
-  </vg-scrub-bar>
-
-  <vg-controls>
-  <vg-play-pause></vg-play-pause>
-  <vg-playback-button></vg-playback-button>
-
-  <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-
-  <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
-
-  <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
-  <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
-
-  <vg-track-selector></vg-track-selector>
-  <vg-mute></vg-mute>
-  <vg-volume></vg-volume>
-
-  <vg-fullscreen></vg-fullscreen>
-  </vg-controls>
-
-  <video [vgMedia]="media" #media id="singleVideo1" preload="auto" crossorigin>
-  <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
-  <source src="http://static.videogular.com/assets/videos/videogular.ogg" type="video/ogg">
-  <source src="http://static.videogular.com/assets/videos/videogular.webm" type="video/webm">
-
-  <track kind="subtitles" label="English" src="http://static.videogular.com/assets/subs/pale-blue-dot.vtt" srclang="en" default>
-  <track kind="subtitles" label="Español" src="http://static.videogular.com/assets/subs/pale-blue-dot-es.vtt" srclang="es">
-  </video>
-  </vg-player>
-</div>
+<article *ngIf="pageData$ | async as pageData" class="for_img1">
+    <div class="bg1">
+        <!--<h2>{{pageData.video1.text}}</h2>-->
+        <h1>{{pageData.video1.text}}</h1>
+        <vg-player>
+            <video [vgMedia]="media" #media id="singleVideo" preload="auto" controls>
+                <source src="../../assets/video/video1.mp4" type="video/mp4">
+            </video>
+        </vg-player>
+        <!------------------------------------------------------------------------------>
+        <h1>{{pageData.video2.text}}</h1>
+        <vg-player>
+            <video [vgMedia]="media" #media id="singleVideo2" preload="auto" controls>
+                <source src="../../assets/video/video2.mp4" type="video/mp4">
+            </video>
+        </vg-player>
+        <!----------------------------------------------------------------------->
+        <h1>{{pageData.video3.text}}</h1>
+        <vg-player>
+            <video [vgMedia]="media" #media id="singleVideo3" preload="auto" controls>
+                <source src="../../assets/video/video3.mp4" type="video/mp4">
+            </video>
+        </vg-player>
+        <!---------------------------------------------------------------------->
+        <h1>{{pageData.video4.text}}</h1>
+        <vg-player>
+            <video [vgMedia]="media" #media id="singleVideo4" preload="auto" controls>
+                <source src="../../assets/video/video4.mp4" type="video/mp4">
+            </video>
+        </vg-player>
+    </div>
+</article>

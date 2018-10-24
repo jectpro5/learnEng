@@ -15,8 +15,8 @@ import {LanguageService} from '../language.service';
     ]
 })
 export class EditComponent implements OnInit, OnDestroy {
+    showSpinner = true;
     title = 'learn english';
-    products$;
     tasks: Task[];
     filteredTasks: any[];
     subscription: Subscription;
@@ -27,10 +27,13 @@ export class EditComponent implements OnInit, OnDestroy {
 
     constructor(private taskService: EditService, private langgServise: LanguageService) {
         this.subscription = this.taskService.getAll()
-            .subscribe(tasks => this.filteredTasks = this.tasks = tasks);
+            .subscribe(tasks => {
+                this.filteredTasks = this.tasks = tasks;
+                this.showSpinner = false;
+            });
 
-        this.items1 = langgServise.getItems1();
-        this.current1 = this.langgServise.getCurrent();
+        // this.items1 = langgServise.getItems1();
+        // this.current1 = this.langgServise.getCurrent();
     }
 
     onClick(number: string) {

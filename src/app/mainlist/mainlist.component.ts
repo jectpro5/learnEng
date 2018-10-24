@@ -1,13 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {fade, fade2, slide, slideBottom, slideRight} from '../animations';
 import {LanguageService} from '../language.service';
+import {Observable} from 'rxjs/Observable';
+import {share, shareReplay, switchMap} from 'rxjs/operators';
+import {LanguageDataServiseService} from '../language-data-servise.service';
 
 @Component({
-  selector: 'app-mainlist',
-  templateUrl: './mainlist.component.html',
-  styleUrls: ['./mainlist.component.css'],
+    selector: 'app-mainlist',
+    templateUrl: './mainlist.component.html',
+    styleUrls: ['./mainlist.component.css'],
     animations: [
-       fade,
+        fade,
         slide,
         slideRight,
         fade2,
@@ -17,17 +20,16 @@ import {LanguageService} from '../language.service';
 export class MainlistComponent implements OnInit {
     items1;
     current1;
-    public isCollapsed2 = true;
     public isCollapsed = true;
-    constructor(private langgServise: LanguageService) {
-        this.items1 = langgServise.getItems1();
-        this.current1 = this.langgServise.getCurrent();
+    pageData$: Observable<any>;
+
+    constructor(private langgServise: LanguageService, private languageDataService: LanguageDataServiseService) {
     }
 
-    wEnterEvent2(number: string) {
-        this.current1 = number;
+    ngOnInit() {
+        this.pageData$ = this.langgServise.getLanguage().pipe(
+            switchMap(lang => this.languageDataService.getPageData(lang, 'mainlist')),
+        );
     }
-  ngOnInit() {
-  }
 
 }

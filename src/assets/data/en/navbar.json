@@ -1,0 +1,26 @@
+[
+  {
+    "route": ["/"],
+    "title": "Main"
+  },
+  {
+    "route": ["/home"],
+    "title": "School"
+  },
+  {
+    "route": ["/contacts"],
+    "title": "Contacts"
+  },
+  {
+    "route": ["/prices"],
+    "title": "Video"
+  },
+  {
+    "route": ["/edit"],
+    "title": "Admin: Schedule"
+  },
+  {
+    "route": ["/schedule"],
+    "title": "Schedule"
+  }
+]

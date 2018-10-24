@@ -1,28 +1,48 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {LanguageService} from '../language.service';
+import {Observable} from 'rxjs/Observable';
+import {map, switchMap} from 'rxjs/operators';
 
 @Component({
-  selector: 'bs-navbar',
-  templateUrl: './bs-navbar.component.html',
-  styleUrls: ['./bs-navbar.component.css']
+    selector: 'bs-navbar',
+    templateUrl: './bs-navbar.component.html',
+    styleUrls: ['./bs-navbar.component.css']
 })
-export class BsNavbarComponent implements OnInit {
+export class BsNavbarComponent implements OnInit, OnDestroy {
     @Output() enterEvent2 = new EventEmitter();
-    items1;
+
+    list = {
+        'en': 'En',
+        'uk': 'Uk',
+    };
+
     current1;
     public isCollapsed = true;
+    menu$: Observable<any>;
 
-  constructor(private langgServise: LanguageService) {
-      this.items1 = langgServise.getItems1();
-      this.current1 = this.langgServise.getCurrent();
-  }
+    constructor(private langgServise: LanguageService) {
+       this.menu$ = this.langgServise.getLanguage().pipe(
+            switchMap(lang => this.langgServise.getMenu(lang))
+        );
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+        // setTimeout(() => {
+        //     this.langgServise.setLanguage('uk');
+        // }, 2000);
+    }
 
-    onClick(number: string) {
-        this.current1 = number;
-        this.enterEvent2.emit(this.current1);
+    ngOnDestroy() {
+    }
+
+    onClick(lang: string) {
+        // this.current1 = number;
+        // this.enterEvent2.emit(this.current1);
+        this.langgServise.setLanguage(lang);
+    }
+
+    getList() {
+        return Object.keys(this.list);
     }
 
 }

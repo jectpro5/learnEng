@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {LanguageService} from '../language.service';
+import {LanguageDataServiseService} from '../language-data-servise.service';
+import {Observable} from 'rxjs/Observable';
+import {switchMap} from 'rxjs/operators';
 
 @Component({
   selector: 'app-prices',
@@ -10,16 +13,15 @@ export class PricesComponent implements OnInit {
     items1;
     current1;
     public isCollapsed = true;
+    pageData$: Observable<any>;
 
-  constructor(private langgServise: LanguageService) {
-      this.items1 = langgServise.getItems1();
-      this.current1 = this.langgServise.getCurrent();
+  constructor(private langgServise: LanguageService, private languageDataService: LanguageDataServiseService) {
   }
-    wEnterEvent2(number: string) {
-        this.current1 = number;
-    }
 
   ngOnInit() {
+      this.pageData$ = this.langgServise.getLanguage().pipe(
+          switchMap(lang => this.languageDataService.getPageData(lang, 'video')),
+      );
   }
 
 }

@@ -1,3 +1,75 @@
+<!--<header>-->
+<!--<nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">-->
+<!--<div class="my_container">-->
+<!--<button class="navbar-toggler" type="button" data-toggle="collapse"-->
+<!--data-target="#navbarSupportedContent" (click)="isCollapsed = !isCollapsed"-->
+<!--aria-controls="navbarSupportedContent"-->
+<!--aria-expanded="false" aria-label="Toggle navigation">-->
+<!--<span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
+<!--<div [ngSwitch]="current1" class="collapse navbar-collapse" id="navbarSupportedContent"-->
+<!--[collapse]="isCollapsed">-->
+<!--<ul class="navbar-nav mr-auto">-->
+<!--<li class="nav-item active">-->
+<!--<a class="nav-link" routerLink="/">-->
+<!--<span *ngSwitchCase="'en'">Main</span>-->
+<!--<span *ngSwitchCase="'ru'">Главная</span>-->
+<!--<span *ngSwitchCase="'ua'">Головна</span>-->
+<!--<span class="sr-only">(current)</span></a>-->
+<!--</li>-->
+<!--<li class="nav-item active">-->
+<!--<a class="nav-link" routerLink="/home">-->
+<!--<span *ngSwitchCase="'en'">School</span>-->
+<!--<span *ngSwitchCase="'ru'">Школа</span>-->
+<!--<span *ngSwitchCase="'ua'">Школа</span>-->
+<!--<span class="sr-only">(current)</span></a>-->
+<!--</li>-->
+<!--<li class="nav-item active">-->
+<!--<a class="nav-link" routerLink="/contacts">-->
+<!--<span *ngSwitchCase="'en'">Contacts</span>-->
+<!--<span *ngSwitchCase="'ru'">Контакты</span>-->
+<!--<span *ngSwitchCase="'ua'">Контакти</span>-->
+<!--<span class="sr-only">(current)</span></a>-->
+<!--</li>-->
+<!--&lt;!&ndash;<li class="nav-item">&ndash;&gt;-->
+<!--&lt;!&ndash;<a class="nav-link" routerLink="/for-teachers">&ndash;&gt;-->
+<!--&lt;!&ndash;<span *ngSwitchCase="'en'">Youtube</span>&ndash;&gt;-->
+<!--&lt;!&ndash;<span *ngSwitchCase="'ru'">Ютуб</span>&ndash;&gt;-->
+<!--&lt;!&ndash;<span *ngSwitchCase="'ua'">Ютуб</span>&ndash;&gt;-->
+<!--&lt;!&ndash;</a>&ndash;&gt;-->
+<!--&lt;!&ndash;</li>&ndash;&gt;-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" routerLink="/prices">-->
+<!--<span *ngSwitchCase="'en'">Video</span>-->
+<!--<span *ngSwitchCase="'ru'">Видео</span>-->
+<!--<span *ngSwitchCase="'ua'">Відео</span>-->
+<!--</a>-->
+<!--</li>-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" routerLink="/edit">-->
+<!--<span *ngSwitchCase="'en'">Admin: Schedule</span>-->
+<!--<span *ngSwitchCase="'ru'">Админ: График</span>-->
+<!--<span *ngSwitchCase="'ua'">Адмін: Графік</span>-->
+<!--</a>-->
+<!--</li>-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" routerLink="/schedule">-->
+<!--<span *ngSwitchCase="'en'">Schedule</span>-->
+<!--<span *ngSwitchCase="'ru'">График</span>-->
+<!--<span *ngSwitchCase="'ua'">Графік</span>-->
+<!--</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--<div class="sw_lng">-->
+<!--<a *ngFor="let item of items1" (click)="onClick(item)" class="btn btn-outline-secondary">-->
+<!--{{ item }}-->
+<!--</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</nav>-->
+<!--</header>-->
+
 <header>
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
         <div class="my_container">
@@ -9,61 +81,70 @@
             </button>
             <div [ngSwitch]="current1" class="collapse navbar-collapse" id="navbarSupportedContent"
                  [collapse]="isCollapsed">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" routerLink="/">
-                            <span *ngSwitchCase="'en'">Main</span>
-                            <span *ngSwitchCase="'ru'">Главная</span>
-                            <span *ngSwitchCase="'ua'">Головна</span>
-                            <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" routerLink="/home">
-                            <span *ngSwitchCase="'en'">School</span>
-                            <span *ngSwitchCase="'ru'">Школа</span>
-                            <span *ngSwitchCase="'ua'">Школа</span>
-                            <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" routerLink="/contacts">
-                            <span *ngSwitchCase="'en'">Contacts</span>
-                            <span *ngSwitchCase="'ru'">Контакты</span>
-                            <span *ngSwitchCase="'ua'">Контакти</span>
-                            <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/for-teachers">
-                            <span *ngSwitchCase="'en'">Youtube</span>
-                            <span *ngSwitchCase="'ru'">Ютуб</span>
-                            <span *ngSwitchCase="'ua'">Ютуб</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/prices">
-                            <span *ngSwitchCase="'en'">Video</span>
-                            <span *ngSwitchCase="'ru'">Видео</span>
-                            <span *ngSwitchCase="'ua'">Відео</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/edit">
-                            <span *ngSwitchCase="'en'">Admin: Schedule</span>
-                            <span *ngSwitchCase="'ru'">Админ: График</span>
-                            <span *ngSwitchCase="'ua'">Адмін: Графік</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" routerLink="/schedule">
-                            <span *ngSwitchCase="'en'">Schedule</span>
-                            <span *ngSwitchCase="'ru'">График</span>
-                            <span *ngSwitchCase="'ua'">Графік</span>
-                        </a>
-                    </li>
-                </ul>
+                <ng-container *ngIf="menu$ | async as menu">
+                    <ul class="navbar-nav mr-auto">
+                        <li *ngFor="let item of menu" class="nav-item">
+                            <a class="nav-link" [routerLink]="item.route">{{item.title}}</a>
+                        </li>
+                    </ul>
+                </ng-container>
+                <!--<div [ngSwitch]="current1" class="collapse navbar-collapse" id="navbarSupportedContent1"-->
+                <!--[collapse]="isCollapsed">-->
+                <!--<ul class="navbar-nav mr-auto">-->
+                <!--<li class="nav-item active">-->
+                <!--<a class="nav-link" routerLink="/">-->
+                <!--<span *ngSwitchCase="'en'">Main</span>-->
+                <!--<span *ngSwitchCase="'ru'">Главная</span>-->
+                <!--<span *ngSwitchCase="'ua'">Головна</span>-->
+                <!--<span class="sr-only">(current)</span></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item active">-->
+                <!--<a class="nav-link" routerLink="/home">-->
+                <!--<span *ngSwitchCase="'en'">School</span>-->
+                <!--<span *ngSwitchCase="'ru'">Школа</span>-->
+                <!--<span *ngSwitchCase="'ua'">Школа</span>-->
+                <!--<span class="sr-only">(current)</span></a>-->
+                <!--</li>-->
+                <!--<li class="nav-item active">-->
+                <!--<a class="nav-link" routerLink="/contacts">-->
+                <!--<span *ngSwitchCase="'en'">Contacts</span>-->
+                <!--<span *ngSwitchCase="'ru'">Контакты</span>-->
+                <!--<span *ngSwitchCase="'ua'">Контакти</span>-->
+                <!--<span class="sr-only">(current)</span></a>-->
+                <!--</li>-->
+                <!--&lt;!&ndash;<li class="nav-item">&ndash;&gt;-->
+                <!--&lt;!&ndash;<a class="nav-link" routerLink="/for-teachers">&ndash;&gt;-->
+                <!--&lt;!&ndash;<span *ngSwitchCase="'en'">Youtube</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span *ngSwitchCase="'ru'">Ютуб</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;<span *ngSwitchCase="'ua'">Ютуб</span>&ndash;&gt;-->
+                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+                <!--&lt;!&ndash;</li>&ndash;&gt;-->
+                <!--<li class="nav-item">-->
+                <!--<a class="nav-link" routerLink="/prices">-->
+                <!--<span *ngSwitchCase="'en'">Video</span>-->
+                <!--<span *ngSwitchCase="'ru'">Видео</span>-->
+                <!--<span *ngSwitchCase="'ua'">Відео</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a class="nav-link" routerLink="/edit">-->
+                <!--<span *ngSwitchCase="'en'">Admin: Schedule</span>-->
+                <!--<span *ngSwitchCase="'ru'">Админ: График</span>-->
+                <!--<span *ngSwitchCase="'ua'">Адмін: Графік</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li class="nav-item">-->
+                <!--<a class="nav-link" routerLink="/schedule">-->
+                <!--<span *ngSwitchCase="'en'">Schedule</span>-->
+                <!--<span *ngSwitchCase="'ru'">График</span>-->
+                <!--<span *ngSwitchCase="'ua'">Графік</span>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--</ul>-->
             </div>
             <div class="sw_lng">
-                <a *ngFor="let item of items1" (click)="onClick(item)" class="btn btn-outline-secondary">
-                    {{ item }}
+                <a *ngFor="let key of getList()" (click)="onClick(key)" class="btn btn-outline-secondary">
+                    {{ list[key] }}
                 </a>
             </div>
         </div>

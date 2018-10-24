@@ -1,21 +1,37 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {Observable} from 'rxjs/Observable';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class LanguageService {
-    items1 = ['en', 'ru', 'ua'];
-    current1 = 'en';
-    getItems1() {
-        return ['en', 'ru', 'ua'];
-    }
-    getCurrent() {
-        return 'en';
-    }
-    // onClickS(number: string) {
-    //    return this.current1;
-    // }
 
-  constructor() { }
-    // onClickS(number: string) {
-    //    return this.current1 = number;
+    constructor(private http: HttpClient) {
+    }
+
+    private language$ = new BehaviorSubject(localStorage.getItem('language') ? localStorage.getItem('language') : 'en');
+
+    setLanguage(language: string): void {
+        this.language$.next(language);
+        localStorage.setItem('language', language);
+    }
+
+    getLanguage(): Observable<any> {
+        return this.language$;
+    }
+
+    getMenu(lang): Observable<any> {
+        return this.http.get('/assets/data/' + lang + '/navbar.json');
+    }
+
+    // items1 = ['en', 'ru', 'ua'];
+    // current1 = 'en';
+    //
+    // getItems1() {
+    //     return ['en', 'ru', 'ua'];
+    // }
+    //
+    // getCurrent() {
+    //     return 'en';
     // }
 }

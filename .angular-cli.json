@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "todo"
+    "name": "learnEn"
   },
   "apps": [
     {
@@ -19,6 +19,7 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
+        "loading.scss",
         "../node_modules/videogular2/fonts/videogular.css",
         "styles.scss"
       ],

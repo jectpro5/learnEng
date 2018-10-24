@@ -20,8 +20,8 @@ export class ScheduleComponent implements OnInit {
       this.subscription = this.taskService.getAll()
           .subscribe(tasks => this.filteredTasks = this.tasks = tasks);
 
-      this.items1 = langgServise.getItems1();
-      this.current1 = this.langgServise.getCurrent();
+      // this.items1 = langgServise.getItems1();
+      // this.current1 = this.langgServise.getCurrent();
   }
     onClick(number: string) {
         this.current1 = number;

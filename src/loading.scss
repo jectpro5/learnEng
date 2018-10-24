@@ -1,0 +1,17 @@
+.app-loading {
+  .logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    animation: pulse_2 1s;
+    background: url(./assets/img-load/girl1.jpg) center center no-repeat;
+  }
+}
+@keyframes pulse_2 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

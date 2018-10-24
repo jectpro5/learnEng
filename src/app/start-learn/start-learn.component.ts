@@ -15,8 +15,8 @@ export class StartLearnComponent implements OnInit {
     public sl_img2 = require('../img_main/women.jpg');
 
   constructor(private langgServise: LanguageService) {
-      this.items1 = langgServise.getItems1();
-      this.current1 = this.langgServise.getCurrent();
+      // this.items1 = langgServise.getItems1();
+      // this.current1 = this.langgServise.getCurrent();
   }
 
     onClick(number: string) {

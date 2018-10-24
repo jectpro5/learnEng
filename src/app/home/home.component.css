@@ -1,6 +1,6 @@
-
 h1 {
     font-size: 25px;
+    text-align: center;
 }
 table {
     margin: 25px auto;
@@ -59,7 +59,7 @@ h1 {
 }
 .bg1 {
     padding: 30px;
-    height:100%;
+    height:auto;
     background: url(../img_main/fresh_snow.png) 100% 100% no-repeat;
     background-size: cover;
     min-height: 700px;

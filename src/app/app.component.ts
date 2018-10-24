@@ -1,16 +1,22 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {LanguageService} from './language.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
-  // items1 = ['en', 'ru', 'ua'];
-  // current1 = 'en';
-  //
-  // onClick(number: string) {
-  //   this.current1 = number;
-  // }
+    // items1;
+    // current1;
+    //
+    // constructor(private langgServise: LanguageService) {
+    //     this.items1 = langgServise.getItems1();
+    //     this.current1 = this.langgServise.getCurrent();
+    // }
+    //
+
+    // wEnterEvent2(number: string) {
+    //     this.current1 = number;
+    // }
 }

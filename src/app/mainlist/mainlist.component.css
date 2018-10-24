@@ -1,7 +1,9 @@
 
 .for_img1 {
     height:980px;
-    background: url(img1/freedom.jpg) 100% 100% no-repeat;
+    /*background: url(img1/freedom.jpg) 100% 100% no-repeat;*/
+    /*background: url("{{pageData.home1.text}}");*/
+    background: url('../../assets/images/freedom.jpg') 100% 100% no-repeat;
     background-size: cover;
 }
 .main1 {

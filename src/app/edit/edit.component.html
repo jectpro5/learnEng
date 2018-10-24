@@ -1,6 +1,7 @@
 <bs-navbar (enterEvent2)="wEnterEvent2($event)"></bs-navbar>
 
 <!--<app-scheduler></app-scheduler>-->
+<app-loader *ngIf="showSpinner"></app-loader>
 <article class="bg1">
     <div class="my_container_content_2">
         <h1>Schedule</h1>
