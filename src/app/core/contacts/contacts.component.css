@@ -2,8 +2,11 @@
     color: red;
 }
 .thumbnail_1 {
+    padding: 20px;
+    line-height: 1.42857143;
+    border: 1px solid #ddd;
+    border-radius: 4px;
     max-width: 500px;
-    display: block;
     margin: 0 auto;
     background-color: #ffffff;
 }
