@@ -1,5 +1,5 @@
 <header>
-    <nav class="navbar navbar-expand-sm navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
         <div class="my_container">
             <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" (click)="isCollapsed = !isCollapsed"
@@ -7,20 +7,20 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div [ngSwitch]="current1" class="collapse navbar-collapse" id="navbarSupportedContent"
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"
                  [collapse]="isCollapsed">
                 <ng-container *ngIf="menu$ | async as menu">
                     <ul class="navbar-nav mr-auto">
-                        <li *ngFor="let item of menu" class="nav-item">
-                            <a class="nav-link" [routerLink]="item.route">{{item.title}}</a>
+                        <li *ngFor="let item of menu" class="nav-item"
+                            routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+                            <a class="nav-link" [routerLink]="item.route" (click)="forCollapse()">{{item.title}}</a>
                         </li>
                     </ul>
                 </ng-container>
-
             </div>
             <div class="sw_lng">
-                <a *ngFor="let key of getList()" (click)="onClick(key)" class="btn btn-outline-secondary">
-                    {{ list[key] }}
+                <a *ngFor="let k of getList()" (click)="onClick(k)" class="btn btn-outline-secondary">
+                    {{ list[k] }}
                 </a>
             </div>
         </div>

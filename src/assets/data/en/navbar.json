@@ -4,7 +4,7 @@
     "title": "Main"
   },
   {
-    "route": ["/home"],
+    "route": ["/school"],
     "title": "School"
   },
   {
@@ -12,7 +12,7 @@
     "title": "Contacts"
   },
   {
-    "route": ["/prices"],
+    "route": ["/video"],
     "title": "Video"
   },
   {

@@ -1,3 +1,39 @@
 .my_container {
     margin: 0 15px;
 }
+.sw_lng a {
+    color: #9A9DA0;
+    margin-left: 2px;
+}
+.sw_lng a:hover {
+    color: white;
+}
+.sw_lng {
+    position: absolute;
+    right: 0;
+    top: -2px;
+}
+@media (max-width: 335px) {
+    .my_container {
+        margin: 0 5px;
+    }
+    .fixed-top {
+        padding: 0.5rem 0.2rem;
+    }
+    .sw_lng {
+        top: 1px;
+    }
+    .sw_lng a {
+        margin-left: 8px;
+        padding: 0.3rem 0.4rem;
+    }
+}
+@media (max-width: 250px) {
+    .my_container {
+        margin: 0;
+    }
+    .fixed-top {
+        padding: 0.5rem 0.1rem;
+    }
+}
+

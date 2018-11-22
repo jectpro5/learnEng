@@ -1,11 +1,11 @@
 export const environment = {
   production: true,
     firebase: {
-        apiKey: 'AIzaSyB4ZVuqcbpMgiS7xO37prrrx1pHPiNr7Oo',
-        authDomain: 'learnen-ec9ad.firebaseapp.com',
-        databaseURL: 'https://learnen-ec9ad.firebaseio.com',
-        projectId: 'learnen-ec9ad',
-        storageBucket: 'learnen-ec9ad.appspot.com',
-        messagingSenderId: '765671541411'
+        apiKey: 'AIzaSyCLlh34WckTEtHFNyhr7gHH8ermpWcY06s',
+        authDomain: 'learn-english-with-julia.firebaseapp.com',
+        databaseURL: 'https://learn-english-with-julia.firebaseio.com',
+        projectId: 'learn-english-with-julia',
+        storageBucket: 'learn-english-with-julia.appspot.com',
+        messagingSenderId: '658204431966'
     }
 };

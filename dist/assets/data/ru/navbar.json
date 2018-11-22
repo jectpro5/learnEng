@@ -1,0 +1,28 @@
+[
+  {
+
+    "route": ["/"],
+    "title": "Главная"
+  },
+  {
+
+    "route": ["/school"],
+    "title": "Школа"
+  },
+  {
+    "route": ["/video"],
+    "title": "Видео"
+  },
+  {
+    "route": ["/contacts"],
+    "title": "Контакты"
+  },
+  {
+    "route": ["/edit"],
+    "title": "Админ: График"
+  },
+  {
+    "route": ["/schedule"],
+    "title": "График"
+  }
+]

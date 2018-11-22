@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {LanguageService} from '../language.service';
+import {LanguageService} from 'shared/services/language.service';
 import {Observable} from 'rxjs/Observable';
 import {map, switchMap} from 'rxjs/operators';
 
@@ -13,10 +13,12 @@ export class BsNavbarComponent {
     list = {
         'en': 'En',
         'uk': 'Uk',
+        'ru': 'Ru',
+        'pl': 'Pl',
     };
-
-    current1;
-    public isCollapsed = true;
+    active_langg_butt = false;
+    clr = 'btn_tgl_1';
+    isCollapsed = true;
     menu$: Observable<any>;
 
     constructor(private langgServise: LanguageService) {
@@ -27,6 +29,10 @@ export class BsNavbarComponent {
 
     onClick(lang: string) {
         this.langgServise.setLanguage(lang);
+    }
+
+    forCollapse() {
+       return this.isCollapsed = true;
     }
 
     getList() {

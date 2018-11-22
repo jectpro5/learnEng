@@ -6,11 +6,11 @@
   },
   {
 
-    "route": ["/home"],
+    "route": ["/school"],
     "title": "Школа"
   },
   {
-    "route": ["/prices"],
+    "route": ["/video"],
     "title": "Відео"
   },
   {

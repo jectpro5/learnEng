@@ -1,0 +1,35 @@
+<form [formGroup]="form" (ngSubmit)="save(form.value)">
+    <div>
+        <a *ngFor="let k of getList()" (click)="onClick(k)" class="btn btn-outline-secondary">
+            {{ list[k] }}
+        </a>
+    </div>
+    <h1 *ngIf="chooseALanguage" class="mt-5">choose a language</h1>
+    <h3 *ngIf="chooseALanguage" class="mb-5">and fill out a form for each language</h3>
+    <!--<textarea rows="2" cols="45"-->
+              <!--[formControlName]="'img'" name="info" id="infoimg" type="text"-->
+              <!--class="form-control"></textarea>-->
+    <!--<form [formGroup]="form" (ngSubmit)="save(form.value)>-->
+    <div *ngFor="let key of getKeys(this.form.controls)" [formGroupName]="key">
+        <article [ngSwitch]="infolang">
+            <section *ngSwitchCase=key class="mb-3">
+                <h1>{{key}}</h1>
+                <div *ngFor="let control of getKeys(form.controls[key].controls)">
+                    <!--<input type="text" [formControlName]="control">-->
+                    <textarea rows="2" cols="45"
+                              [formControlName]="control" name="info" id="info" type="text"
+                              class="form-control"></textarea>
+                </div>
+                <p *ngIf="key === 'en'">in the last field enter the url of the picture (optional)</p>
+            </section>
+        </article>
+    </div>
+    <button class="btn btn-primary">Save</button>
+    <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
+</form>
+<!--<form #f="ngForm">-->
+<!--<label for="title">Title</label>-->
+<!--<input #title="ngModel" [(ngModel)]="infos['en'].title" name="title" id="title" type="text">-->
+<!--<div ></div>-->
+<!--</form>-->
+

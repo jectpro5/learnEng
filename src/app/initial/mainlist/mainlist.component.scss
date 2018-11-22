@@ -1,0 +1,159 @@
+$btn2: darkgoldenrod;
+
+.for_img1 {
+    height:980px;
+    background: url('../../../assets/images/freedom.jpg') 100% 100% no-repeat;
+    background-size: cover;
+}
+.main1 {
+    margin: 0 15px;
+    padding-top: 5%;
+    overflow: hidden;
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    color: darkgreen;
+}
+h3 {
+    text-align: center;
+    margin-top: 30px;
+    color: darkslateblue;
+}
+.h3_3 {
+    font-style: italic;
+    color: #343A40;
+}
+.fixed_bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1030;
+    a:last-of-type {
+        background-color: $btn2;
+        border-color: $btn2;
+    }
+    a:last-of-type:hover {
+        background-color: darken($btn2, 7%);
+        border-color: darken($btn2, 7%);
+    }
+}
+@media (max-width: 1240px) {
+    .for_img1 {
+        height: 800px;
+    }
+}
+@media (max-width: 1100px) {
+    .for_img1 {
+        height: 700px;
+    }
+    .h3_3 {
+        color: #FCFCFC;
+    }
+}
+@media (max-width: 900px) {
+    .for_img1 {
+        height: 600px;
+    }
+    h3 {
+        color: white;
+    }
+    .fixed_bottom {
+        width: 168px;
+    }
+    .fixed_bottom a:first-of-type {
+        margin-bottom: 15px;
+    }
+}
+@media (max-width: 800px) {
+    h1 {
+        font-size: 32px;
+    }
+    h2 {
+        font-size: 27px;
+    }
+}
+@media (max-width: 700px) {
+    .for_img1 {
+        height: 560px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 22px;
+        color: #FCFCFC;
+    }
+}
+@media (max-width: 575px) {
+    .main1 {
+        padding-top: 14%;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 21px;
+    }
+    h3 {
+        font-size: 19px;
+    }
+}
+@media (max-width: 540px) {
+    h1 {
+        font-size: 25px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .fixed_bottom {
+        bottom: 50px;
+        left: 0;
+    }
+    .for_img1 {
+        background-position-x: -60px;
+    }
+}
+@media (max-width: 460px) {
+    .fixed_bottom {
+        bottom: 10px;
+    }
+}
+@media (max-width: 360px) {
+    .for_img1 {
+        background-position-x: -102px;
+    }
+}
+@media (max-width: 335px) {
+    .for_img1 {
+        background-position-x: -125px;
+    }
+    .main1 {
+        padding-top: 5%;
+    }
+}
+@media (max-width: 315px) {
+    h1 {
+        font-size: 20px;
+    }
+    h2 {
+        font-size: 18px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+
+}
+@media (max-width: 270px) {
+    h3 {
+        margin-top: 5px;
+    }
+}

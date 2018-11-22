@@ -1,0 +1,9 @@
+<article *ngIf="pageData$ | async as pageData" class="d-flex justify-content-center">
+  <div class="hiw_in d-flex justify-content-center">
+    <div class="hiw_h4">
+      <h4>{{pageData.hiwork1.text}}</h4>
+      <h4>{{pageData.hiwork2.text}}</h4>
+      <h4>{{pageData.hiwork3.text}}</h4>
+    </div>
+  </div>
+</article>

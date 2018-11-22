@@ -2,6 +2,9 @@
   "projects": {
     "juliayak": "juliayak-45eb2",
     "default": "juliayak-45eb2",
-    "learnen-ec9ad": "learnen-ec9ad"
+    "learnen-ec9ad": "learnen-ec9ad",
+    "lfl": "learn-a-foreign-language",
+    "le": "learnen-ec9ad",
+    "jl": "learn-english-with-julia"
   }
 }

@@ -1,0 +1,35 @@
+<form #f="ngForm" (ngSubmit)="save(f.value)">
+  <div class="form-group">
+    <label for="date">Дата</label>
+    <input #task="ngModel" [(ngModel)]="tasks.task" name="task" id="date" type="text" class="form-control" required>
+    <div class="alert alert-danger" *ngIf="task.touched && task.invalid">Task is required</div>
+  </div>
+
+  <div class="form-group">
+    <label for="9_00">9:00 - 9:45</label>
+    <input [(ngModel)]="tasks.priority" name="priority" id="9_00" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="9_45">9:45 - 10:30</label>
+    <input [(ngModel)]="tasks.comment" name="comment" id="9_45" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="10_30">10:30 - 11:15</label>
+    <input [(ngModel)]="tasks.details" name="details" id="10_30" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="11_15">11:15 - 12:00</label>
+    <input [(ngModel)]="tasks.d4" name="d4" id="11_15" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="12_00">12:00 - 13:45</label>
+    <input [(ngModel)]="tasks.d5" name="d5" id="12_00" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="13_45">13:45 - 14:00</label>
+    <input [(ngModel)]="tasks.d6" name="d6" id="13_45" type="text" class="form-control">
+  </div>
+
+  <button class="btn btn-primary">Save</button>
+  <button type="button" (click)="delete()" class="btn btn-danger">Delete</button>
+</form>

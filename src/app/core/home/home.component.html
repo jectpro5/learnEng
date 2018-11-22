@@ -1,0 +1,38 @@
+<article *ngIf="pageData$ | async as pageData" class="for_img1">
+    <section class="main1">
+        <h1>{{pageData.home1.text}}</h1>
+    </section>
+</article>
+<!--==========================================================================================-->
+<app-loader *ngIf="showSpinner"></app-loader>
+<ng-container *ngIf="firebaseLangg$ | async as lang">
+    <article [ngSwitch]="lang" class="container">
+        <section *ngSwitchCase="lang">
+            <ul *ngFor="let info of filteredInfos" class="list-group for_li">
+                <li *ngIf="info[lang].title" class="list-group-item separate_paragrafs">{{ info[lang].title }}</li>
+                <li *ngIf="info[lang].description || info[lang].comment || info['en'].img"
+                    class="list-group-item separate_paragrafs">
+                    <div class="row">
+                        <div class="col">{{ info[lang].description }}</div>
+                        <div *ngIf="info['en'].img || info[lang].comment" class="col-12 col-md-5 align-self-center img2">
+                            <h3 *ngIf="info[lang].comment">{{ info[lang].comment }}</h3>
+                            <img *ngIf="info['en'].img" [src]="info['en'].img"
+                                 alt="{{ info[lang].comment }}" class="img-fluid">
+                            <p></p>
+                        </div>
+                    </div>
+                </li>
+                <li
+                        class="list-group-item"><a [routerLink]="['/school/', info.$key]">Edit</a></li>
+            </ul>
+            <div *ngIf="!showSpinner" class="add_new container">
+                <p>
+                    <a routerLink="/info-form" class="btn btn-primary btn-sm">New Task</a>
+                </p>
+            </div>
+        </section>
+    </article>
+</ng-container>
+<!--==================================================================================================-->
+
+
