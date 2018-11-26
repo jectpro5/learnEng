@@ -16,13 +16,5 @@
   {
     "route": ["/contacts"],
     "title": "Контакти"
-  },
-  {
-    "route": ["/edit"],
-    "title": "Адмін: Графік"
-  },
-  {
-    "route": ["/schedule"],
-    "title": "Графік"
   }
 ]

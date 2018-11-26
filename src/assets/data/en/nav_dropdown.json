@@ -1,0 +1,10 @@
+[
+  {
+    "route": ["/edit"],
+    "title": "Admin: Schedule"
+  },
+  {
+    "route": ["/schedule"],
+    "title": "Schedule"
+  }
+]

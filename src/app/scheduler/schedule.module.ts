@@ -5,10 +5,11 @@ import { SharedModule } from 'shared/shared.module';
 import { ReviewsFormComponent } from './edit/reviews-form/reviews-form.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { SchedulerComponent } from './scheduler/scheduler.component';
+import {AuthGuardService} from '../auth-guard.service';
 
 const scheduleRoutes: Routes = [
     {path: 'reviews-form', component: ReviewsFormComponent},
-    {path: 'schedule', component: ScheduleComponent},
+    {path: 'schedule', component: ScheduleComponent, canActivate: [AuthGuardService]},
 ];
 
 @NgModule({

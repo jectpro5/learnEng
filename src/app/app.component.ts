@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
-import {LanguageService} from 'shared/services/language.service';
+import {AuthService} from './auth.service';
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-root',
@@ -7,16 +8,4 @@ import {LanguageService} from 'shared/services/language.service';
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-    // items1;
-    // current1;
-    //
-    // constructor(private langgServise: LanguageService) {
-    //     this.items1 = langgServise.getItems1();
-    //     this.current1 = this.langgServise.getCurrent();
-    // }
-    //
-
-    // wEnterEvent2(number: string) {
-    //     this.current1 = number;
-    // }
 }

@@ -16,13 +16,5 @@
   {
     "route": ["/contacts"],
     "title": "Adresy"
-  },
-  {
-    "route": ["/edit"],
-    "title": "Administrator"
-  },
-  {
-    "route": ["/schedule"],
-    "title": "Zaplanuj"
   }
 ]

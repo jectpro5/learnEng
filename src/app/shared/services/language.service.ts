@@ -23,6 +23,9 @@ export class LanguageService {
     getMenu(lang): Observable<any> {
         return this.http.get('/assets/data/' + lang + '/navbar.json');
     }
+    getMenuDropdown(lang): Observable<any> {
+        return this.http.get('/assets/data/' + lang + '/nav_dropdown.json');
+    }
 
     // items1 = ['en', 'ru', 'ua'];
     // current1 = 'en';

@@ -16,6 +16,12 @@ h4 {
 .hiw_h4 {
     width: 85%;
 }
+.for_note {
+    width: 95%;
+    margin: 20px auto 0 auto;
+    color: #006400;
+    text-indent: 20px;
+}
 @media (max-width: 920px) {
     .hiw_in {
         max-width: 800px;
@@ -42,6 +48,9 @@ h4 {
     h4 {
         font-size: 15px;
         margin: 10px 0;
+    }
+    .for_note {
+        font-size: 13px;
     }
 }
 @media (max-width: 610px) {

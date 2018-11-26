@@ -1,6 +1,9 @@
 .my_container {
     margin: 0 15px;
 }
+a.dropdown-item, a.dropdown-toggle {
+    cursor: pointer;
+}
 .sw_lng a {
     color: #9A9DA0;
     margin-left: 2px;

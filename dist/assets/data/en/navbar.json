@@ -14,13 +14,5 @@
   {
     "route": ["/video"],
     "title": "Video"
-  },
-  {
-    "route": ["/edit"],
-    "title": "Admin: Schedule"
-  },
-  {
-    "route": ["/schedule"],
-    "title": "Schedule"
   }
 ]

@@ -79,11 +79,11 @@ export class InfoFormComponent implements OnInit {
     }
 
     private initForm() {
-        let infoTitle = '';
+        const infoTitle = '';
         let infoTitl;
-        let infoComment = '';
-        let infoDescription = '';
-        let infoImgUrl = '';
+        const infoComment = '';
+        const infoDescription = '';
+        const infoImgUrl = '';
         const inf = this.infoService.get(this.id);
 
         if (inf) {
