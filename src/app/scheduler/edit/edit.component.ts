@@ -2,7 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {EditService} from 'shared/services/edit.service';
 import {Subscription} from 'rxjs/Subscription';
 import {Task} from 'shared/models/task';
-import {fade, fade2} from '../../animations';
+import {fade, fade2} from 'shared/animations';
 import {LanguageService} from 'shared/services/language.service';
 
 @Component({

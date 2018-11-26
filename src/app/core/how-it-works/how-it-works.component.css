@@ -12,6 +12,7 @@ h4 {
     background: url(../../../assets/images/img_main/blackboard-school.jpg) 100% 100% no-repeat;
     background-size: contain;
     color: floralwhite;
+    margin: 0 auto;
 }
 .hiw_h4 {
     width: 85%;

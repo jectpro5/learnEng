@@ -19,8 +19,8 @@ import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { CoreModule } from './core/core.module';
 import { InitialModule } from './initial/initial.module';
 import { ScheduleModule } from './scheduler/schedule.module';
-import {AuthService} from './auth.service';
-import {AuthGuardService} from './auth-guard.service';
+import {AuthService} from './admin/services/auth.service';
+import {AuthGuardService} from './admin/services/auth-guard.service';
 
 // import {SingleMediaPlayer} from './single-media-player';
 

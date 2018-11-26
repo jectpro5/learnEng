@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {LanguageService} from 'shared/services/language.service';
 import {Observable} from 'rxjs/Observable';
 import {map, switchMap} from 'rxjs/operators';
-import {AuthService} from '../auth.service';
+import {AuthService} from '../admin/services/auth.service';
 
 @Component({
     selector: 'bs-navbar',

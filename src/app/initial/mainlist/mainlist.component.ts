@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {fade, fade2, slide, slideBottom, slideRight} from '../../animations';
+import {fade, fade2, slide, slideBottom, slideRight} from 'shared/animations';
 import {LanguageService} from 'shared/services/language.service';
 import {Observable} from 'rxjs/Observable';
 import {share, shareReplay, switchMap} from 'rxjs/operators';

@@ -7,8 +7,8 @@ import { InfoFormComponent } from './core/home/info-form/info-form.component';
 import { HowItWorksComponent } from './core/how-it-works/how-it-works.component';
 import { StartLearnComponent } from './core/start-learn/start-learn.component';
 import { MainlistComponent } from './initial/mainlist/mainlist.component';
-import {LoginComponent} from './core/login/login.component';
-import {AuthGuardService} from './auth-guard.service';
+import {LoginComponent} from './admin/login/login.component';
+import {AuthGuardService} from './admin/services/auth-guard.service';
 
 const appRoutes: Routes = [
     {path: '', component: MainlistComponent},

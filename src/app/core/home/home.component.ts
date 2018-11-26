@@ -6,7 +6,7 @@ import { Subscription } from 'rxjs/Subscription';
 import { Info } from 'shared/models/info';
 import { InfoService } from 'shared/services/info.service';
 
-import { fade, fade2 } from '../../animations';
+import { fade, fade2 } from 'shared/animations';
 import { LanguageDataServiseService } from 'shared/services/language-data-servise.service';
 import { LanguageService } from 'shared/services/language.service';
 import { TaskService } from 'shared/services/task.service';

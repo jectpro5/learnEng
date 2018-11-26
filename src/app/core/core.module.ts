@@ -6,7 +6,7 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ForTeachersComponent } from './for-teachers/for-teachers.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { StartLearnComponent } from './start-learn/start-learn.component';
-import {LoginComponent} from './login/login.component';
+import {LoginComponent} from '../admin/login/login.component';
 
 @NgModule({
   imports: [
